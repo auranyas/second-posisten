@@ -25,3 +25,5 @@ Route::get('/menfess' , [MenfessController::class , 'index']);
 
 Route::post('/menfess/add' , [MenfessController::class , 'store']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/admin', [AdminController::class, 'index']);
