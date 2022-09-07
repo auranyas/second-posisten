@@ -14,7 +14,9 @@ class KomentarController extends Controller
      */
     public function index()
     {
-        //
+        $komentars = Komentar::get();
+
+        return view('komentar' , compact('komentars'));
     }
 
     /**
@@ -24,7 +26,7 @@ class KomentarController extends Controller
      */
     public function create()
     {
-        //
+        return view('komentar');
     }
 
     /**
@@ -35,7 +37,13 @@ class KomentarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $komentar = new Komentar();
+        $komentar->komentar = $request->komentar;
+        $komentar->menfess_id = $request->menfess_id;
+        // dd($komentar);
+        $komentar->save();
+
+        return redirect()->back();
     }
 
     /**

@@ -51,9 +51,11 @@ class MenfessController extends Controller
      * @param  \App\Models\Menfess  $menfess
      * @return \Illuminate\Http\Response
      */
-    public function show(Menfess $menfess)
+    public function show($id)
     {
-        //
+        $menfess = Menfess::find($id);
+
+        return view('komentar', compact('menfess'));
     }
 
     /**

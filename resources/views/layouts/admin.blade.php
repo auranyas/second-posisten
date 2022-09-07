@@ -54,14 +54,23 @@
                     </div> -->
 
                 <nav class="main-navbar"
-                    style="background-color: #A9B2FFF7; box-shadow: 5px 5px 5px 0px rgba(0,0,0,25%);">
-                    <div class="container m-0">
+                    style="background-color: #A9B2FFF7; box-shadow: 5px 5px 5px 0px rgba(0,0,0,25%); ">
+                    <div class="container m-0" style="max-width: 2000px;">
                         <ul>
                             <li class="menu-item  ">
                                 <div class="logo">
-                                    <a href="{{ url('/menfess') }}"><img src="assets/images/Posisten.png" alt="Logo"></a>
-                                    <a href="{{ url('/login') }}"><img src="assets/images/admin.png"
+                                    <a href="{{ url('/menfess') }}"><img src="assets/images/logo/Posisten.png" alt="Logo"></a>
+                                    <a href="{{ url('/login') }}"><img src="assets/images/logo/admin.png"
                                             style="text-align: right;" alt="Logo"></a>
+                                    {{-- <a href=""><img src="{{ asset('/images/log-out.png') }}" alt="Logo" ></a> --}}
+                                </div>
+                            </li>
+                            <li class="menu-item ">
+                                <div class="logo display-flex">
+                                    <a href="{{ route('logout') }}" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><img src="/assets/images/log-out.png" alt="Logo" class=""></a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                                 </div>
                             </li>
                         </ul>
@@ -72,6 +81,7 @@
                         </ul> -->
                         
                     </div>
+                    
                 </nav>
 
 

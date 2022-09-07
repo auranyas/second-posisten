@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="col-md-9 p-0">
-                    @foreach ($m as $key => $menfess)
+                    @foreach ($menfesses as $key => $menfess)
                         <form>
                             @csrf
                             <div class="form-group">
@@ -50,7 +50,8 @@
                                                 <textarea cols="50" readonly="readonly" style="border: none">{{ $menfess->menfess }}</textarea>
                                             </div>
                                             <div class="col-0">
-                                                <img src="assets/images/komentar.png">
+                                                <a href="{{ url('/menfess/' . $menfess->id) }}"><img src="assets/images/komentar.png"></a>
+                                                <img src="assets/images/hapus.png">
                                             </div>
                                         </div>
                                     </div>

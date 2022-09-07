@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5">
 
         <div class="col-md-12 mt-2">
             <div class="row gx-3">
@@ -48,9 +48,9 @@
                                             </div>
                                             <div class="col-0">
                                                 <textarea cols="50" readonly="readonly" style="border: none">{{ $menfess->menfess }}</textarea>
-                                            </div>
+                                            </div><hr>
                                             <div class="col-0">
-                                                <img src="assets/images/komentar.png">
+                                                <a href="{{ url('/menfess/' . $menfess->id) }}"><img src="assets/images/komentar.png"></a>
                                             </div>
                                         </div>
                                     </div>
