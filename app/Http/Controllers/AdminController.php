@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $menfesses =  Menfess::get();
+        $menfesses =  Menfess::orderBy("created_at","DESC")->get();
 
         return view('admin' , compact('menfesses'));
     }
@@ -82,6 +82,9 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $menfesses = Menfess::find($id);
+        $menfesses->delete();
+
+        return redirect()->back();
     }
 }

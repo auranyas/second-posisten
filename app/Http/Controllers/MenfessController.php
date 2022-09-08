@@ -14,7 +14,7 @@ class MenfessController extends Controller
      */
     public function index()
     {
-        $m =  Menfess::get();
+        $m =  Menfess::orderBy("created_at","DESC")->get();
 
         return view('landing' , compact('m'));
     }

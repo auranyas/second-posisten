@@ -53,7 +53,7 @@
                         </div>
                     </div> -->
 
-                <nav class="main-navbar"
+                <nav class="main-navbar fixed-top"
                     style="background-color: #A9B2FFF7; box-shadow: 5px 5px 5px 0px rgba(0,0,0,25%); ">
                     <div class="container m-0" style="max-width: 2000px;">
                         <ul>
@@ -86,7 +86,7 @@
 
 
             </header>
-
+{{-- 
             <button type="button" class="btn btn-lg btn-floating position-fixed" data-bs-toggle="modal"
                 data-bs-target="#exampleModal" style="right: 0; bottom: 0; z-index: 10;">
                 <img src="assets/images/create.png">
@@ -113,7 +113,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             <div class="content-wrapper container" style="margin-left: 0px; padding-left: 0px; max-width: 1330px;">
 

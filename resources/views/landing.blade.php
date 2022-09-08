@@ -46,11 +46,18 @@
                                             <div class="col-4">
                                                 <p class="card-text">Anonymous</p>
                                             </div>
+                                            <div class="col-2" >
+                                                {{ date('d-m-Y', strtotime($menfess->created_at));}}
+                                            </div>
                                             <div class="col-0">
                                                 <textarea cols="50" readonly="readonly" style="border: none">{{ $menfess->menfess }}</textarea>
                                             </div><hr>
-                                            <div class="col-0">
-                                                <a href="{{ url('/menfess/' . $menfess->id) }}"><img src="assets/images/komentar.png"></a>
+                                            <div class="row">
+
+                                                <div class="col-8 col-md-8">
+                                                    <a href="{{ url('/menfess/' . $menfess->id) }}"><img src="assets/images/komentar.png"></a>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>

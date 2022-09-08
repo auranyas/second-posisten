@@ -29,5 +29,6 @@ Route::post('/menfess/add' , [MenfessController::class , 'store']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/menfess/{id}' , [MenfessController::class , 'show'])->name('menfess.show');
 Route::post('/menfess/{id}/add-comment', [KomentarController::class , 'store']);
+Route::get('/menfess/delete/{id}' , [AdminController::class , 'destroy']);
 
 Route::get('/admin', [AdminController::class, 'index']);

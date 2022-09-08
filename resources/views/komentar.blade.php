@@ -65,7 +65,7 @@
                     <form action="{{ url('/menfess/' . $menfess->id . '/add-comment') }}"
                         method="post">
                         @csrf
-                        <textarea type="text" name="komentar" class="form-control" placeholder="tambahkan komentarmu disini!"></textarea><br />
+                        <textarea required type="text" name="komentar" class="form-control" placeholder="tambahkan komentarmu disini!"></textarea><br />
                         <input type="hidden" name="menfess_id" value="{{ $menfess->id }}">
                         <button type="submit"  style="background-color: #A9B2FFF7; border: none;">Submit</button>
                     </form>

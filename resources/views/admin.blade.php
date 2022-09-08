@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5">
 
         <div class="col-md-12 mt-2">
             <div class="row gx-3">
@@ -51,7 +51,7 @@
                                             </div>
                                             <div class="col-0">
                                                 <a href="{{ url('/menfess/' . $menfess->id) }}"><img src="assets/images/komentar.png"></a>
-                                                <img src="assets/images/hapus.png">
+                                                <a href="{{url('/menfess/delete/' . $menfess->id)}}"><img src="assets/images/hapus.png"></a>
                                             </div>
                                         </div>
                                     </div>
